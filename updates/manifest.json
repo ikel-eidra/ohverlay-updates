@@ -1,0 +1,25 @@
+{
+  "version": "4.0.1",
+  "channel": "stable",
+  "installer_url": "https://ikel-eidra.github.io/ohverlay-updates/downloads/Ohverlay-StandardUser.exe",
+  "portable_url": "https://ikel-eidra.github.io/ohverlay-updates/downloads/Ohverlay-StandardUser.exe",
+  "download_url": "https://ikel-eidra.github.io/ohverlay-updates/downloads/Ohverlay-StandardUser.exe",
+  "filename": "Ohverlay-StandardUser.exe",
+  "notes": "Ohverlay 4.0.1 office release hub.",
+  "min_version": "1.0.0",
+  "released_at": "2026-04-12",
+  "roles": {
+    "standard_user": {
+      "installer_url": "https://ikel-eidra.github.io/ohverlay-updates/downloads/Ohverlay-StandardUser.exe",
+      "portable_url": "https://ikel-eidra.github.io/ohverlay-updates/downloads/Ohverlay-StandardUser.exe",
+      "download_url": "https://ikel-eidra.github.io/ohverlay-updates/downloads/Ohverlay-StandardUser.exe",
+      "filename": "Ohverlay-StandardUser.exe"
+    },
+    "supervisor": {
+      "installer_url": "https://ikel-eidra.github.io/ohverlay-updates/downloads/Ohverlay-Supervisor.exe",
+      "portable_url": "https://ikel-eidra.github.io/ohverlay-updates/downloads/Ohverlay-Supervisor.exe",
+      "download_url": "https://ikel-eidra.github.io/ohverlay-updates/downloads/Ohverlay-Supervisor.exe",
+      "filename": "Ohverlay-Supervisor.exe"
+    }
+  }
+}
