@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ohverlay</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg-a: #07111d;
+      --bg-b: #0b2132;
+      --line: rgba(111, 227, 255, 0.22);
+      --glow: #6fe3ff;
+      --text: #eaf8ff;
+      --muted: #9fb7c8;
+      --accent: #ffd86e;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(111, 227, 255, 0.18), transparent 34%),
+        radial-gradient(circle at 20% 20%, rgba(255, 216, 110, 0.12), transparent 25%),
+        linear-gradient(180deg, var(--bg-b), var(--bg-a));
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .shell {
+      width: min(900px, 100%);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 32px;
+      background: rgba(7, 17, 29, 0.78);
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35), 0 0 40px rgba(111, 227, 255, 0.12);
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 5vw, 4rem);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      background: rgba(10, 24, 39, 0.86);
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    a.button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(111, 227, 255, 0.32);
+      color: var(--text);
+      text-decoration: none;
+      background: rgba(111, 227, 255, 0.12);
+    }
+
+    a.button.primary {
+      background: linear-gradient(135deg, rgba(111, 227, 255, 0.24), rgba(255, 216, 110, 0.2));
+      color: #fff8e0;
+    }
+
+    code {
+      color: var(--accent);
+      font-family: Consolas, "Courier New", monospace;
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <h1>Ohverlay</h1>
+    <p>Central update origin for the office desktop builds. This page exists so the tray updater, direct installers, and future releases all resolve from the same domain.</p>
+    <p>Current release: <code>4.0.1</code></p>
+
+    <section class="grid">
+      <article class="card">
+        <strong>Standard User</strong>
+        <p>Office desktop build for staff and peers.</p>
+        <a class="button primary" href="./downloads/Ohverlay-StandardUser.exe">Download EXE</a>
+      </article>
+      <article class="card">
+        <strong>Supervisor</strong>
+        <p>Desktop build with dashboard and monitoring tools.</p>
+        <a class="button primary" href="./downloads/Ohverlay-Supervisor.exe">Download EXE</a>
+      </article>
+      <article class="card">
+        <strong>Updater Endpoint</strong>
+        <p>The desktop app checks this JSON manifest for role-aware downloads.</p>
+        <a class="button" href="./updates/manifest.json">Open Manifest</a>
+      </article>
+    </section>
+
+    <div class="actions">
+      <a class="button" href="./download/">Download Hub</a>
+      <a class="button" href="mailto:support@ohverlay.com">Support</a>
+    </div>
+  </main>
+</body>
+</html>
