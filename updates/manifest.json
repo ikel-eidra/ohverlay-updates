@@ -1,11 +1,11 @@
 {
-  "version": "4.0.2",
+  "version": "4.0.3",
   "channel": "stable",
   "installer_url": "../downloads/Ohverlay-StandardUser.exe",
   "portable_url": "../downloads/Ohverlay-StandardUser.exe",
   "download_url": "../downloads/Ohverlay-StandardUser.exe",
   "filename": "Ohverlay-StandardUser.exe",
-  "notes": "Ohverlay 4.0.2 office release hub with updater fallback hardening.",
+  "notes": "Ohverlay 4.0.3 office release hub with branded HTTPS domain enabled.",
   "min_version": "1.0.0",
   "released_at": "2026-04-13",
   "roles": {
