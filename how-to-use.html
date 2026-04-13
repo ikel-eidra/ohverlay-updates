@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How To Use Ohverlay</title>
+  <link rel="stylesheet" href="./assets/site.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="./">
+          <span class="brand-mark"></span>
+          <span class="brand-copy">
+            <strong>Ohverlay</strong><br>
+            <small>Calm overlay intelligence</small>
+          </span>
+        </a>
+        <nav class="nav">
+          <a href="./">Overview</a>
+          <a href="./how-to-use.html">How To Use</a>
+          <a href="./whitepaper.html">Whitepaper</a>
+          <a href="./ethics.html">Ethics</a>
+          <a href="./roadmap.html">Roadmap</a>
+          <a href="./download/">Downloads</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="section-inner">
+          <span class="eyebrow">Practical guide</span>
+          <h1>How to use the current office build</h1>
+          <p class="lead">This guide is for the actual `4.0.2` desktop build. It covers first-time setup, file handoff flow, sticky-note use, logs, and the path rules that matter for successful network dispatch.</p>
+          <div class="button-row">
+            <a class="button primary" href="./download/">Get the EXEs</a>
+            <a class="button secondary" href="./updates/manifest.json">Open live manifest</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner split-grid">
+          <article class="whitepaper-section">
+            <span class="kicker">Choose the build</span>
+            <h2>1. Install the role that matches the user</h2>
+            <ul class="whitepaper-list">
+              <li><strong>Standard User:</strong> day-to-day staff build for file handoffs, reminders, sticky notes, and local logs.</li>
+              <li><strong>Supervisor:</strong> dashboard-enabled build for oversight, deadline visibility, and role-aware monitoring surfaces.</li>
+              <li>Copy the EXE to the target PC and run it. No Python install is required on the destination machine.</li>
+            </ul>
+          </article>
+
+          <article class="whitepaper-section">
+            <span class="kicker">What opens first</span>
+            <h2>2. Use the tray icon as the control point</h2>
+            <ul class="whitepaper-list">
+              <li>Launch the EXE and look for the Ohverlay tray icon near the Windows clock.</li>
+              <li>Right-click the tray icon and open <strong>Control Center</strong>.</li>
+              <li>Control Center is the main place for shared-folder setup, peers, cleanup, and runtime adjustments.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Setup screens</span>
+              <h2>3. Configure your shared folder and peers</h2>
+            </div>
+            <p class="section-copy">The two settings that matter most are your own shared folder and your peer list. If those are wrong, handoffs and notifications will fail even if the UI looks correct.</p>
+          </div>
+          <div class="gallery-grid">
+            <article class="screenshot-card">
+              <div class="screenshot-frame">
+                <img src="./assets/screenshots/network-folder-setup.jpeg" alt="Network folder setup dialog">
+              </div>
+              <strong>Shared folder setup</strong>
+              <p>Enter the folder path other users can read. This is your source folder for file handoffs.</p>
+            </article>
+            <article class="screenshot-card">
+              <div class="screenshot-frame">
+                <img src="./assets/screenshots/handoff-composer.jpeg" alt="Handoff composer window">
+              </div>
+              <strong>Handoff composer</strong>
+              <p>The selected item must stay inside the configured shared folder. That validation is strict by design.</p>
+            </article>
+            <article class="screenshot-card">
+              <div class="screenshot-frame">
+                <img src="./assets/screenshots/console-and-notifications.jpeg" alt="Console and notifications">
+              </div>
+              <strong>Console and notification result</strong>
+              <p>When the receiver opens the item, the event shows up in the console and acknowledgment flow.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner split-grid">
+          <article class="whitepaper-section">
+            <span class="kicker">Path guidance</span>
+            <h2>4. Use a stable network path</h2>
+            <ul class="whitepaper-list">
+              <li>UNC paths such as <strong>\\server\share\username</strong> are the safest option when several users are involved.</li>
+              <li>Mapped drive paths can work if Windows can resolve them consistently and convert them back to the same network location.</li>
+              <li>If the app says the selected path cannot be validated against the shared folder, the chosen file is outside the configured base folder.</li>
+            </ul>
+          </article>
+
+          <article class="whitepaper-section tip-box">
+            <span class="kicker">Rule of thumb</span>
+            <h2>Keep the file under your declared shared root</h2>
+            <p>If your shared folder is `\\server\shared\michael`, then the chosen item should live inside that folder tree. Example valid selections:</p>
+            <ul class="whitepaper-list">
+              <li>`\\server\shared\michael\JCM\plan.dwg`</li>
+              <li>`\\server\shared\michael\handoff\revision-02\`</li>
+            </ul>
+            <p>Example invalid selection:</p>
+            <ul class="whitepaper-list">
+              <li>`D:\Downloads\plan.dwg` when your configured shared folder is a different network location.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner split-grid">
+          <article class="whitepaper-section">
+            <span class="kicker">Daily workflow</span>
+            <h2>5. Send a file handoff</h2>
+            <div class="timeline">
+              <article class="timeline-step">
+                <div class="phase">01</div>
+                <div>
+                  <strong>Place the file in your shared folder</strong>
+                  <p>Keep the file or folder inside your configured shared location.</p>
+                </div>
+              </article>
+              <article class="timeline-step">
+                <div class="phase">02</div>
+                <div>
+                  <strong>Open Create File Handoff</strong>
+                  <p>Choose the item, select one or more recipients, and add a display label or message.</p>
+                </div>
+              </article>
+              <article class="timeline-step">
+                <div class="phase">03</div>
+                <div>
+                  <strong>Dispatch the handoff</strong>
+                  <p>The peer receives an overlay notification. Clicking it opens the routed item or folder path.</p>
+                </div>
+              </article>
+            </div>
+          </article>
+
+          <article class="whitepaper-section">
+            <span class="kicker">Daily workflow</span>
+            <h2>6. Use sticky notes and timers</h2>
+            <ul class="whitepaper-list">
+              <li>Create multiple notes at the same time.</li>
+              <li>Use countdown mode for deadlines and elapsed mode for tracking active work.</li>
+              <li>Adjust transparency, theme, font scale, and lock state based on how much screen presence you want.</li>
+              <li>Locked notes are meant to stay visually present with less interference on the active program.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner split-grid">
+          <article class="whitepaper-section">
+            <span class="kicker">Logs and traceability</span>
+            <h2>7. Check the activity record</h2>
+            <ul class="whitepaper-list">
+              <li>The activity console shows sent, received, opened, acknowledged, and sticky-note events.</li>
+              <li>When `D:` exists, local data is written under <strong>D:\Ohverlay</strong>.</li>
+              <li>If `D:` is unavailable, the app falls back to the legacy profile-based location under the user profile.</li>
+              <li>Supervisor surfaces build on the same local-first event trail instead of a hidden external tracker.</li>
+            </ul>
+          </article>
+
+          <article class="whitepaper-section">
+            <span class="kicker">Current limitations</span>
+            <h2>8. What is still being refined</h2>
+            <ul class="whitepaper-list">
+              <li>`https://ohverlay.com` is not yet ready because the domain certificate is still mismatched.</li>
+              <li>The app updater currently uses the GitHub Pages backup origin as the canonical HTTPS-safe endpoint.</li>
+              <li>Messaging, richer dashboards, and deeper supervisor views are in progress, not fully finished product tiers yet.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>
+          <strong>How To Use Ohverlay</strong><br>
+          <span class="muted">Setup steps, path rules, and current office workflow guidance.</span>
+        </div>
+        <nav class="footer-nav">
+          <a href="./">Overview</a>
+          <a href="./whitepaper.html">Whitepaper</a>
+          <a href="./ethics.html">Ethics</a>
+          <a href="./roadmap.html">Roadmap</a>
+          <a href="./download/">Downloads</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

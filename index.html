@@ -18,6 +18,7 @@
           </span>
         </a>
         <nav class="nav">
+          <a href="./how-to-use.html">How To Use</a>
           <a href="./whitepaper.html">Whitepaper</a>
           <a href="./ethics.html">Ethics</a>
           <a href="./roadmap.html">Roadmap</a>
@@ -36,6 +37,7 @@
             <p>Ohverlay is a calm workspace layer for sticky notes, network file handoffs, supervisor dashboards, and future AI assistance. It is designed for visibility without clutter, urgency without panic, and coordination without surveillance theater.</p>
             <div class="hero-actions">
               <a class="button primary" href="./download/">Download the Builds</a>
+              <a class="button secondary" href="./how-to-use.html">How To Use</a>
               <a class="button secondary" href="./whitepaper.html">Read the Whitepaper</a>
               <a class="button ghost" href="./ethics.html">See the guardrails</a>
             </div>
@@ -132,6 +134,117 @@
       </section>
 
       <section class="section">
+        <div class="section-inner">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Feature Inventory</span>
+              <h2>What the office build already does today</h2>
+            </div>
+            <p class="section-copy">This is the current product state, not concept art. These are the surfaces already present in the active Windows build.</p>
+          </div>
+          <div class="doc-grid">
+            <article class="doc-card">
+              <strong>Network File Handoff</strong>
+              <p>Select a file or folder inside your shared location, choose peers, dispatch the handoff, and let the receiver open the routed path directly from the overlay.</p>
+            </article>
+            <article class="doc-card">
+              <strong>Sticky Notes and Timers</strong>
+              <p>Create multiple notes at once with countdown, elapsed time, transparency, theme, font scaling, lock state, and overdue escalation support.</p>
+            </article>
+            <article class="doc-card">
+              <strong>Activity Console and Logs</strong>
+              <p>Sent, received, opened, acknowledged, and sticky-note actions are recorded locally for review and export.</p>
+            </article>
+            <article class="doc-card">
+              <strong>Role-Aware Desktop Builds</strong>
+              <p>Standard User and Supervisor EXEs ship separately so the operational surfaces match the actual office role.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">UI Gallery</span>
+              <h2>Real interface images from the office build</h2>
+            </div>
+            <p class="section-copy">These screenshots came from the actual deployment flow: setup, handoff dispatch, and console plus overlay notifications.</p>
+          </div>
+          <div class="gallery-grid">
+            <article class="screenshot-card">
+              <div class="screenshot-frame">
+                <img src="./assets/screenshots/network-folder-setup.jpeg" alt="Ohverlay shared folder setup dialog">
+              </div>
+              <strong>1. Shared folder setup</strong>
+              <p>Configure the network path that other users can read from. Ohverlay normalizes Windows paths and can convert mapped drives to UNC where Windows exposes that mapping.</p>
+            </article>
+            <article class="screenshot-card">
+              <div class="screenshot-frame">
+                <img src="./assets/screenshots/handoff-composer.jpeg" alt="Ohverlay handoff composer window over AutoCAD">
+              </div>
+              <strong>2. File handoff composer</strong>
+              <p>Pick the shared item, choose recipients, add a label and message, then dispatch the notification without leaving the active workspace.</p>
+            </article>
+            <article class="screenshot-card">
+              <div class="screenshot-frame">
+                <img src="./assets/screenshots/console-and-notifications.jpeg" alt="Ohverlay console and stacked notifications over AutoCAD">
+              </div>
+              <strong>3. Console and stacked notifications</strong>
+              <p>Receivers get a glowing overlay, and the activity console records sent, opened, and acknowledgment events for later review.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner split-grid">
+          <article class="card">
+            <span class="kicker">How it works</span>
+            <h3>Fast operating flow</h3>
+            <div class="timeline">
+              <article class="timeline-step">
+                <div class="phase">01</div>
+                <div>
+                  <strong>Install the right build</strong>
+                  <p>Use the Standard User EXE for staff or the Supervisor EXE for coordinators and oversight roles.</p>
+                </div>
+              </article>
+              <article class="timeline-step">
+                <div class="phase">02</div>
+                <div>
+                  <strong>Configure folder, name, and peers</strong>
+                  <p>Open Control Center, set your shared folder, your username, and the peers you want to notify.</p>
+                </div>
+              </article>
+              <article class="timeline-step">
+                <div class="phase">03</div>
+                <div>
+                  <strong>Send or receive</strong>
+                  <p>Create file handoffs, sticky notes, or timed reminders. Receivers can open directly from the overlay.</p>
+                </div>
+              </article>
+            </div>
+            <div class="section-actions">
+              <a class="button primary" href="./how-to-use.html">Open full usage guide</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <span class="kicker">Path rule</span>
+            <h3>The selected item must stay inside the configured shared folder</h3>
+            <p>That rule is enforced intentionally so a notification cannot point outside the sender’s declared shared area. If a handoff fails validation, the selected file or folder is usually outside the configured base path.</p>
+            <ul class="feature-list">
+              <li>UNC paths are safest for multi-user consistency.</li>
+              <li>Mapped drives can still work if all relevant PCs resolve them correctly.</li>
+              <li>Ohverlay normalizes Windows paths before validating the handoff.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
         <div class="section-inner split-grid">
           <article class="card">
             <span class="kicker">Recovered public materials</span>
@@ -196,6 +309,7 @@
           <span class="muted">Calm overlay intelligence for teams, coordinators, and future grounded AI workflows.</span>
         </div>
         <nav class="footer-nav">
+          <a href="./how-to-use.html">How To Use</a>
           <a href="./whitepaper.html">Whitepaper</a>
           <a href="./ethics.html">Ethics</a>
           <a href="./roadmap.html">Roadmap</a>

@@ -136,6 +136,7 @@ a { color: inherit; }
 .three-up,
 .doc-grid,
 .download-grid,
+.gallery-grid,
 .ethics-grid,
 .whitepaper-layout,
 .table-grid {
@@ -151,7 +152,8 @@ a { color: inherit; }
 .split-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .three-up { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .doc-grid,
-.download-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.download-grid,
+.gallery-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 .ethics-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .whitepaper-layout { grid-template-columns: 1.2fr 0.8fr; }
 .table-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -231,6 +233,7 @@ h3 { font-size: 1.28rem; }
 .card,
 .doc-card,
 .download-card,
+.screenshot-card,
 .timeline-step,
 .whitepaper-section,
 .ethics-principle,
@@ -406,14 +409,16 @@ h3 { font-size: 1.28rem; }
 
 .card,
 .download-card,
-.doc-card {
+.doc-card,
+.screenshot-card {
   position: relative;
   overflow: hidden;
 }
 
 .card::before,
 .doc-card::before,
-.download-card::before {
+.download-card::before,
+.screenshot-card::before {
   content: "";
   position: absolute;
   inset: 0 auto auto 0;
@@ -424,7 +429,8 @@ h3 { font-size: 1.28rem; }
 
 .card-title,
 .doc-card strong,
-.download-card strong {
+.download-card strong,
+.screenshot-card strong {
   font-size: 1.06rem;
 }
 
@@ -478,6 +484,39 @@ h3 { font-size: 1.28rem; }
 .inline-link {
   color: var(--cyan);
   text-decoration: none;
+}
+
+.screenshot-card {
+  padding: 16px;
+}
+
+.screenshot-frame {
+  margin: -4px -4px 14px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(126, 231, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.screenshot-frame img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.screenshot-card p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.tip-box {
+  border-color: rgba(247, 216, 143, 0.24);
+  background:
+    linear-gradient(180deg, rgba(247, 216, 143, 0.05), transparent 28%),
+    var(--panel);
 }
 
 .timeline {
@@ -550,4 +589,5 @@ h3 { font-size: 1.28rem; }
   .hero-visual { min-height: 400px; }
   .overlay-card.note-two { top: 162px; right: 18px; }
   .overlay-card.note-three { left: 26px; right: 26px; width: auto; }
+  .screenshot-frame img { height: 210px; }
 }
