@@ -1,24 +1,24 @@
 {
-  "version": "4.0.1",
+  "version": "4.0.2",
   "channel": "stable",
-  "installer_url": "https://ikel-eidra.github.io/ohverlay-updates/downloads/Ohverlay-StandardUser.exe",
-  "portable_url": "https://ikel-eidra.github.io/ohverlay-updates/downloads/Ohverlay-StandardUser.exe",
-  "download_url": "https://ikel-eidra.github.io/ohverlay-updates/downloads/Ohverlay-StandardUser.exe",
+  "installer_url": "../downloads/Ohverlay-StandardUser.exe",
+  "portable_url": "../downloads/Ohverlay-StandardUser.exe",
+  "download_url": "../downloads/Ohverlay-StandardUser.exe",
   "filename": "Ohverlay-StandardUser.exe",
-  "notes": "Ohverlay 4.0.1 office release hub.",
+  "notes": "Ohverlay 4.0.2 office release hub with updater fallback hardening.",
   "min_version": "1.0.0",
-  "released_at": "2026-04-12",
+  "released_at": "2026-04-13",
   "roles": {
     "standard_user": {
-      "installer_url": "https://ikel-eidra.github.io/ohverlay-updates/downloads/Ohverlay-StandardUser.exe",
-      "portable_url": "https://ikel-eidra.github.io/ohverlay-updates/downloads/Ohverlay-StandardUser.exe",
-      "download_url": "https://ikel-eidra.github.io/ohverlay-updates/downloads/Ohverlay-StandardUser.exe",
+      "installer_url": "../downloads/Ohverlay-StandardUser.exe",
+      "portable_url": "../downloads/Ohverlay-StandardUser.exe",
+      "download_url": "../downloads/Ohverlay-StandardUser.exe",
       "filename": "Ohverlay-StandardUser.exe"
     },
     "supervisor": {
-      "installer_url": "https://ikel-eidra.github.io/ohverlay-updates/downloads/Ohverlay-Supervisor.exe",
-      "portable_url": "https://ikel-eidra.github.io/ohverlay-updates/downloads/Ohverlay-Supervisor.exe",
-      "download_url": "https://ikel-eidra.github.io/ohverlay-updates/downloads/Ohverlay-Supervisor.exe",
+      "installer_url": "../downloads/Ohverlay-Supervisor.exe",
+      "portable_url": "../downloads/Ohverlay-Supervisor.exe",
+      "download_url": "../downloads/Ohverlay-Supervisor.exe",
       "filename": "Ohverlay-Supervisor.exe"
     }
   }
