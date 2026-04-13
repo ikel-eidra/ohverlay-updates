@@ -4,40 +4,72 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ohverlay Downloads</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: "Segoe UI", Tahoma, sans-serif;
-      background: #0a1420;
-      color: #f0f8ff;
-      display: grid;
-      place-items: center;
-      padding: 24px;
-    }
-    main {
-      width: min(720px, 100%);
-      border: 1px solid rgba(124, 203, 255, 0.25);
-      border-radius: 20px;
-      background: rgba(10, 20, 32, 0.92);
-      padding: 28px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-    }
-    h1 { margin-top: 0; }
-    p { color: #a9bbca; line-height: 1.6; }
-    ul { padding-left: 18px; }
-    a { color: #8ce8ff; }
-  </style>
+  <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
-  <main>
-    <h1>Ohverlay Downloads</h1>
-    <p>Choose the installer that matches the role used in your office deployment.</p>
-    <ul>
-      <li><a href="../downloads/Ohverlay-StandardUser.exe">Ohverlay-StandardUser.exe</a></li>
-      <li><a href="../downloads/Ohverlay-Supervisor.exe">Ohverlay-Supervisor.exe</a></li>
-      <li><a href="../updates/manifest.json">updates/manifest.json</a></li>
-    </ul>
-  </main>
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="../">
+          <span class="brand-mark"></span>
+          <span class="brand-copy">
+            <strong>Ohverlay</strong><br>
+            <small>Calm overlay intelligence</small>
+          </span>
+        </a>
+        <nav class="nav">
+          <a href="../">Overview</a>
+          <a href="../whitepaper.html">Whitepaper</a>
+          <a href="../ethics.html">Ethics</a>
+          <a href="../roadmap.html">Roadmap</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="section-inner">
+          <span class="eyebrow">Role-aware distribution</span>
+          <h1>Downloads</h1>
+          <p class="lead">Choose the desktop build that matches the office role. Both installers are also referenced by the live updater manifest.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner download-grid">
+          <article class="download-card">
+            <strong>Ohverlay Standard User</strong>
+            <p>Day-to-day staff build for sticky notes, network file handoffs, overlays, and local logs.</p>
+            <a href="../downloads/Ohverlay-StandardUser.exe">Download EXE</a>
+          </article>
+          <article class="download-card">
+            <strong>Ohverlay Supervisor</strong>
+            <p>Role-aware build with dashboard access and coordination surfaces for oversight roles.</p>
+            <a href="../downloads/Ohverlay-Supervisor.exe">Download EXE</a>
+          </article>
+          <article class="download-card">
+            <strong>Update Manifest</strong>
+            <p>Public JSON endpoint used by the tray updater for role-specific downloads.</p>
+            <a href="../updates/manifest.json">Open manifest</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>
+          <strong>Ohverlay Downloads</strong><br>
+          <span class="muted">Stable public update origin plus direct office install links.</span>
+        </div>
+        <nav class="footer-nav">
+          <a href="../">Overview</a>
+          <a href="../whitepaper.html">Whitepaper</a>
+          <a href="../ethics.html">Ethics</a>
+          <a href="../roadmap.html">Roadmap</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>

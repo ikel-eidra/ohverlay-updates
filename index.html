@@ -4,135 +4,206 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ohverlay</title>
-  <style>
-    :root {
-      color-scheme: dark;
-      --bg-a: #07111d;
-      --bg-b: #0b2132;
-      --line: rgba(111, 227, 255, 0.22);
-      --glow: #6fe3ff;
-      --text: #eaf8ff;
-      --muted: #9fb7c8;
-      --accent: #ffd86e;
-    }
-
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: "Segoe UI", Tahoma, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top, rgba(111, 227, 255, 0.18), transparent 34%),
-        radial-gradient(circle at 20% 20%, rgba(255, 216, 110, 0.12), transparent 25%),
-        linear-gradient(180deg, var(--bg-b), var(--bg-a));
-      display: grid;
-      place-items: center;
-      padding: 24px;
-    }
-
-    .shell {
-      width: min(900px, 100%);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 32px;
-      background: rgba(7, 17, 29, 0.78);
-      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35), 0 0 40px rgba(111, 227, 255, 0.12);
-      backdrop-filter: blur(10px);
-    }
-
-    h1 {
-      margin: 0 0 12px;
-      font-size: clamp(2rem, 5vw, 4rem);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    p {
-      margin: 0 0 14px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
-      margin-top: 28px;
-    }
-
-    .card {
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 18px;
-      background: rgba(10, 24, 39, 0.86);
-    }
-
-    .card strong {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--text);
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    a.button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 44px;
-      padding: 0 18px;
-      border-radius: 999px;
-      border: 1px solid rgba(111, 227, 255, 0.32);
-      color: var(--text);
-      text-decoration: none;
-      background: rgba(111, 227, 255, 0.12);
-    }
-
-    a.button.primary {
-      background: linear-gradient(135deg, rgba(111, 227, 255, 0.24), rgba(255, 216, 110, 0.2));
-      color: #fff8e0;
-    }
-
-    code {
-      color: var(--accent);
-      font-family: Consolas, "Courier New", monospace;
-    }
-  </style>
+  <link rel="stylesheet" href="./assets/site.css">
 </head>
 <body>
-  <main class="shell">
-    <h1>Ohverlay</h1>
-    <p>Central update origin for the office desktop builds. This page exists so the tray updater, direct installers, and future releases all resolve from the same domain.</p>
-    <p>Current release: <code>4.0.1</code></p>
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="./">
+          <span class="brand-mark"></span>
+          <span class="brand-copy">
+            <strong>Ohverlay</strong><br>
+            <small>Overlay intelligence that stays out of the way</small>
+          </span>
+        </a>
+        <nav class="nav">
+          <a href="./whitepaper.html">Whitepaper</a>
+          <a href="./ethics.html">Ethics</a>
+          <a href="./roadmap.html">Roadmap</a>
+          <a href="./download/">Downloads</a>
+          <a href="./updates/manifest.json">Manifest</a>
+        </nav>
+      </div>
+    </header>
 
-    <section class="grid">
-      <article class="card">
-        <strong>Standard User</strong>
-        <p>Office desktop build for staff and peers.</p>
-        <a class="button primary" href="./downloads/Ohverlay-StandardUser.exe">Download EXE</a>
-      </article>
-      <article class="card">
-        <strong>Supervisor</strong>
-        <p>Desktop build with dashboard and monitoring tools.</p>
-        <a class="button primary" href="./downloads/Ohverlay-Supervisor.exe">Download EXE</a>
-      </article>
-      <article class="card">
-        <strong>Updater Endpoint</strong>
-        <p>The desktop app checks this JSON manifest for role-aware downloads.</p>
-        <a class="button" href="./updates/manifest.json">Open Manifest</a>
-      </article>
-    </section>
+    <main>
+      <section class="hero">
+        <div class="section-inner hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Recovered public website</span>
+            <h1>Work in the flow, not under a pile of popups.</h1>
+            <p>Ohverlay is a calm workspace layer for sticky notes, network file handoffs, supervisor dashboards, and future AI assistance. It is designed for visibility without clutter, urgency without panic, and coordination without surveillance theater.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="./download/">Download the Builds</a>
+              <a class="button secondary" href="./whitepaper.html">Read the Whitepaper</a>
+              <a class="button ghost" href="./ethics.html">See the guardrails</a>
+            </div>
+            <div class="stat-row">
+              <article class="stat-card">
+                <div class="stat-value">4.0.1</div>
+                <p>Current office release with working update origin.</p>
+              </article>
+              <article class="stat-card">
+                <div class="stat-value">2 roles</div>
+                <p>Separate Standard User and Supervisor builds.</p>
+              </article>
+              <article class="stat-card">
+                <div class="stat-value">Local-first</div>
+                <p>Logs, overlays, and traceability stay inspectable on the machine.</p>
+              </article>
+            </div>
+          </div>
 
-    <div class="actions">
-      <a class="button" href="./download/">Download Hub</a>
-      <a class="button" href="mailto:support@ohverlay.com">Support</a>
-    </div>
-  </main>
+          <div class="hero-visual">
+            <div class="visual-window">
+              <div class="visual-topline">
+                <span>Ohverlay Runtime</span>
+                <span class="dot-row"><span></span><span></span><span></span></span>
+              </div>
+              <div class="overlay-card note-one">
+                <strong>Sticky Notes</strong>
+                <p>Countdowns, elapsed time, transparency, lock state, and calmer deadline visibility.</p>
+              </div>
+              <div class="overlay-card note-two">
+                <strong>File Handoff</strong>
+                <p>Joel opened the routed drawing. Sender, time, path, and acknowledgment captured.</p>
+              </div>
+              <div class="overlay-pill">
+                <strong>Supervisor View</strong>
+                <p>Deadlines, sent items, acknowledgements, and active overlays in one place.</p>
+              </div>
+              <div class="overlay-bar"></div>
+              <div class="overlay-card note-three">
+                <strong>Blue AI, later</strong>
+                <p>Grounded assistant behavior comes after the workflow and ethics surfaces are clear.</p>
+              </div>
+              <div class="overlay-swell"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Core surfaces</span>
+              <h2>Built for operations, not vanity dashboards</h2>
+            </div>
+            <p class="section-copy">The office build already moved beyond ambient visuals. It now combines reminder overlays, team dispatch, logs, and role-aware visibility in a single runtime.</p>
+          </div>
+
+          <div class="three-up">
+            <article class="card">
+              <span class="kicker">Sticky note system</span>
+              <div class="card-title">Reminder overlays that stay readable</div>
+              <p>Multiple simultaneous notes, countdowns, elapsed timers, theme options, transparency control, and lock state for click-through behavior.</p>
+              <ul class="feature-list">
+                <li>Countdown and elapsed modes.</li>
+                <li>Theme and opacity presets.</li>
+                <li>Bottom-stack task visibility without hijacking the screen.</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <span class="kicker">Network dispatch</span>
+              <div class="card-title">File routing with traceability</div>
+              <p>Send a file from a shared folder, notify selected peers, open the path from the receiver overlay, and preserve the sender/recipient/time record.</p>
+              <ul class="feature-list">
+                <li>Sender and receiver logs.</li>
+                <li>Path-aware notifications.</li>
+                <li>Future cleanup prompts for stale shared items.</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <span class="kicker">Supervisor runtime</span>
+              <div class="card-title">Visibility with declared scope</div>
+              <p>The supervisor build is not a different brand skin. It is a different operational role with dashboard access, timeline review, and deadline visibility.</p>
+              <ul class="feature-list">
+                <li>Role-aware desktop builds.</li>
+                <li>Separate user and supervisor distribution.</li>
+                <li>Password-gated supervisor surfaces where configured.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner split-grid">
+          <article class="card">
+            <span class="kicker">Recovered public materials</span>
+            <h3>The missing whitepaper is back</h3>
+            <p>The public site had temporarily become only the updater/download endpoint. The original whitepaper-style material still existed in the repo, so it is now linked back into the live website instead of being stranded in source docs.</p>
+            <div class="section-actions">
+              <a class="button primary" href="./whitepaper.html">Open whitepaper</a>
+              <a class="button ghost" href="./roadmap.html">Open roadmap</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <span class="kicker">Design constraints</span>
+            <h3>Calm technology is a product rule, not a mood board</h3>
+            <p>Ohverlay is explicitly designed around privacy-first, local-first, transparent, and non-spammy behavior. That matters more than visual style because it determines what the system is allowed to become.</p>
+            <div class="section-actions">
+              <a class="button secondary" href="./ethics.html">Read ethics page</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Downloads and docs</span>
+              <h2>One public site, two jobs</h2>
+            </div>
+            <p class="section-copy">This website now serves as both the update origin for the desktop app and the public-facing product site.</p>
+          </div>
+          <div class="download-grid">
+            <article class="download-card">
+              <strong>Standard User Build</strong>
+              <p>Office desktop build for staff, peers, and day-to-day file handoffs.</p>
+              <a href="./downloads/Ohverlay-StandardUser.exe">Download EXE</a>
+            </article>
+            <article class="download-card">
+              <strong>Supervisor Build</strong>
+              <p>Dashboard-enabled office build for oversight and coordination roles.</p>
+              <a href="./downloads/Ohverlay-Supervisor.exe">Download EXE</a>
+            </article>
+            <article class="download-card">
+              <strong>Updater Manifest</strong>
+              <p>Role-aware update metadata used by the tray updater.</p>
+              <a href="./updates/manifest.json">Open manifest</a>
+            </article>
+            <article class="download-card">
+              <strong>Source Documents</strong>
+              <p>Recovered markdown docs behind the public summaries.</p>
+              <a href="./source-docs/GRANT_PROPOSAL_TEMPLATE.md">Open source docs</a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>
+          <strong>Ohverlay</strong><br>
+          <span class="muted">Calm overlay intelligence for teams, coordinators, and future grounded AI workflows.</span>
+        </div>
+        <nav class="footer-nav">
+          <a href="./whitepaper.html">Whitepaper</a>
+          <a href="./ethics.html">Ethics</a>
+          <a href="./roadmap.html">Roadmap</a>
+          <a href="./download/">Downloads</a>
+          <a href="mailto:support@ohverlay.com">Support</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
