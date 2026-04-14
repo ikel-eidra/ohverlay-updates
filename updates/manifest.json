@@ -1,24 +1,24 @@
 {
   "version": "4.0.3",
   "channel": "stable",
-  "installer_url": "../downloads/Ohverlay-StandardUser.exe",
-  "portable_url": "../downloads/Ohverlay-StandardUser.exe",
-  "download_url": "../downloads/Ohverlay-StandardUser.exe",
+  "installer_url": "https://github.com/ikel-eidra/ohverlay-updates/releases/download/v4.0.3/Ohverlay-StandardUser.exe",
+  "portable_url": "https://github.com/ikel-eidra/ohverlay-updates/releases/download/v4.0.3/Ohverlay-StandardUser.exe",
+  "download_url": "https://github.com/ikel-eidra/ohverlay-updates/releases/download/v4.0.3/Ohverlay-StandardUser.exe",
   "filename": "Ohverlay-StandardUser.exe",
   "notes": "Ohverlay 4.0.3 office release hub with branded HTTPS domain enabled.",
   "min_version": "1.0.0",
   "released_at": "2026-04-13",
   "roles": {
     "standard_user": {
-      "installer_url": "../downloads/Ohverlay-StandardUser.exe",
-      "portable_url": "../downloads/Ohverlay-StandardUser.exe",
-      "download_url": "../downloads/Ohverlay-StandardUser.exe",
+      "installer_url": "https://github.com/ikel-eidra/ohverlay-updates/releases/download/v4.0.3/Ohverlay-StandardUser.exe",
+      "portable_url": "https://github.com/ikel-eidra/ohverlay-updates/releases/download/v4.0.3/Ohverlay-StandardUser.exe",
+      "download_url": "https://github.com/ikel-eidra/ohverlay-updates/releases/download/v4.0.3/Ohverlay-StandardUser.exe",
       "filename": "Ohverlay-StandardUser.exe"
     },
     "supervisor": {
-      "installer_url": "../downloads/Ohverlay-Supervisor.exe",
-      "portable_url": "../downloads/Ohverlay-Supervisor.exe",
-      "download_url": "../downloads/Ohverlay-Supervisor.exe",
+      "installer_url": "https://github.com/ikel-eidra/ohverlay-updates/releases/download/v4.0.3/Ohverlay-Supervisor.exe",
+      "portable_url": "https://github.com/ikel-eidra/ohverlay-updates/releases/download/v4.0.3/Ohverlay-Supervisor.exe",
+      "download_url": "https://github.com/ikel-eidra/ohverlay-updates/releases/download/v4.0.3/Ohverlay-Supervisor.exe",
       "filename": "Ohverlay-Supervisor.exe"
     }
   }
